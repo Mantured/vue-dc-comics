@@ -1,43 +1,39 @@
 <template>
   <div id="app">
     <!-- Header -->
-    <IndexHeader />
+    <Header />
     <!-- logo + Nav -->
 
     <!-- Main -->
-    <IndexMain />
+    <Main />
     <!-- Main Top -->
     <!-- Main Bottom -->
 
     <!-- Footer -->
-    <IndexFooter />
+    <Footer />
     <!-- Footer top -->
     <!-- Footer bottom -->
   </div>
 </template>
 
 <script>
-import IndexHeader from "./components/IndexHeader.vue";
-import IndexMain from "./components/IndexHeader.vue";
-import IndexFooter from "./components/IndexHeader.vue";
+import Header from "./components/Header.vue";
+import Main from "./components/Main.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "App",
   components: {
-    IndexHeader,
-    IndexMain,
-    IndexFooter,
+    Header,
+    Main,
+    Footer,
   },
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+/* google font Montserrat & Raleway */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;1,100&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* collegamento style scss */
+@import "./assets/scss/style.scss";
 </style>
