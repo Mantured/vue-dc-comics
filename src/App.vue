@@ -1,19 +1,34 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- Header -->
+    <IndexHeader />
+    <!-- logo + Nav -->
+
+    <!-- Main -->
+    <IndexMain />
+    <!-- Main Top -->
+    <!-- Main Bottom -->
+
+    <!-- Footer -->
+    <IndexFooter />
+    <!-- Footer top -->
+    <!-- Footer bottom -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import IndexHeader from "./components/IndexHeader.vue";
+import IndexMain from "./components/IndexHeader.vue";
+import IndexFooter from "./components/IndexHeader.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    IndexHeader,
+    IndexMain,
+    IndexFooter,
+  },
+};
 </script>
 
 <style lang="scss">
