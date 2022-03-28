@@ -93,8 +93,8 @@ export default {
 <style lang="scss" scooped>
 div.index-footer-top {
   height: 380px;
-  display: flex;
   color: white;
+  display: flex;
   background-size: cover;
   background-repeat: no-repeat;
   justify-content: space-around;

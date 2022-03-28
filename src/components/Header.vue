@@ -5,35 +5,10 @@
     <!-- nav -->
     <nav>
       <ul>
-        <li>
-          <a href="#">characters</a>
-        </li>
-        <li>
-          <a href="#" class="active">comics</a>
-        </li>
-        <li>
-          <a href="#">movies</a>
-        </li>
-        <li>
-          <a href="#">tv</a>
-        </li>
-        <li>
-          <a href="#">games</a>
-        </li>
-        <li>
-          <a href="#">collectibles</a>
-        </li>
-        <li>
-          <a href="#">videos</a>
-        </li>
-        <li>
-          <a href="#">fans</a>
-        </li>
-        <li>
-          <a href="#">news</a>
-        </li>
-        <li>
-          <a href="#">shop</a>
+        <li v-for="(link, index) in navLinks" :key="index" @click="toggle()">
+          <a :href="link.href" :class="{active: link.active}">{{
+            link.text
+          }}</a>
         </li>
       </ul>
     </nav>
@@ -43,10 +18,74 @@
 <script>
 export default {
   name: "IndexHeader",
+  data: function () {
+    return {
+      navLinks: [
+        {
+          text: "characters",
+          href: "#",
+          active: false,
+        },
+        {
+          text: "comics",
+          href: "#",
+          active: false,
+        },
+        {
+          text: "movies",
+          href: "#",
+          active: false,
+        },
+        {
+          text: "tv",
+          href: "#",
+          active: false,
+        },
+        {
+          text: "games",
+          href: "#",
+          active: false,
+        },
+        {
+          text: "collectibles",
+          href: "#",
+          active: true,
+        },
+        {
+          text: "videos",
+          href: "#",
+          active: false,
+        },
+        {
+          text: "fans",
+          href: "#",
+          active: false,
+        },
+        {
+          text: "news",
+          href: "#",
+          active: false,
+        },
+        {
+          text: "shop",
+          href: "#",
+          active: false,
+        },
+      ],
+    };
+  },
+  methods: {
+    toggle() {
+      this.active = !this.active;
+      console.log(this.active);
+    },
+  },
 };
 </script>
 
 <style lang="scss" scooped>
+@import "../assets/scss/style.scss";
+
 div.index-header {
   display: flex;
   padding: 0.5rem;
@@ -54,8 +93,6 @@ div.index-header {
   justify-content: space-around;
 }
 nav {
-  width: 65%;
-
   ul {
     display: flex;
     align-items: center;
@@ -72,8 +109,11 @@ nav {
       }
     }
     li:hover a,
-    li:active a,
-    a.active {
+    li:active a {
+      padding-bottom: 46px;
+      border-bottom: 4px solid blue;
+    }
+    .active {
       padding-bottom: 46px;
       border-bottom: 4px solid blue;
     }
