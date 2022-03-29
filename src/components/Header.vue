@@ -87,6 +87,7 @@ export default {
 @import "../assets/scss/style.scss";
 
 div.index-header {
+  height: 13vh;
   display: flex;
   padding: 0.5rem;
   align-items: center;

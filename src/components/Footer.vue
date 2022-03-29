@@ -92,7 +92,7 @@ export default {
 
 <style lang="scss" scooped>
 div.index-footer-top {
-  height: 380px;
+  height: 42vh;
   color: white;
   display: flex;
   background-size: cover;
@@ -134,7 +134,7 @@ div.index-footer-top {
 
 div.index-footer-bottom {
   z-index: 2;
-  height: 97px;
+  height: 10vh;
   display: flex;
   position: relative;
   align-items: center;

@@ -6,7 +6,7 @@
     <div class="index-main-bottom">
       <ul>
         <li v-for="(links, index) in mainLinks" :key="index">
-          <img :src="`/images/${links.img}`" />
+          <img :src="require(`@/assets/images/${links.img}`)" />
           <a :href="links.href">{{ links.text }}</a>
         </li>
       </ul>
@@ -61,7 +61,7 @@ div.index-main {
 }
 
 div.index-main-top {
-  height: 120px;
+  height: 15vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,7 +70,7 @@ div.index-main-top {
 
 div.index-main-bottom {
   display: flex;
-  height: 200px;
+  height: 20vh;
   align-items: center;
   justify-content: space-around;
   background-color: rgb(2, 130, 249);
