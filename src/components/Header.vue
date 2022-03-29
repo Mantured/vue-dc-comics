@@ -5,10 +5,13 @@
     <!-- nav -->
     <nav>
       <ul>
-        <li v-for="(link, index) in navLinks" :key="index" @click="toggle()">
-          <a :href="link.href" :class="{active: link.active}">{{
-            link.text
-          }}</a>
+        <li v-for="(link, index) in navLinks" :key="index">
+          <a
+            :href="link.href"
+            :class="{active: link.active}"
+            @click="toggle(index)"
+            >{{ link.text }}</a
+          >
         </li>
       </ul>
     </nav>
@@ -110,12 +113,9 @@ nav {
       }
     }
     li:hover a,
-    li:active a {
-      padding-bottom: 46px;
-      border-bottom: 4px solid blue;
-    }
+    li:active a,
     .active {
-      padding-bottom: 46px;
+      padding-bottom: 5vh;
       border-bottom: 4px solid blue;
     }
   }
