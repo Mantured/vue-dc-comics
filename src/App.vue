@@ -1,19 +1,19 @@
 <template>
-  <div id="app">
-    <!-- Header -->
-    <Header />
-    <!-- logo + Nav -->
+    <div id="app">
+        <!-- Header -->
+        <Header />
+        <!-- logo + Nav -->
 
-    <!-- Main -->
-    <Main />
-    <!-- Main Top -->
-    <!-- Main Bottom -->
+        <!-- Main -->
+        <Main />
+        <!-- Main Top -->
+        <!-- Main Bottom -->
 
-    <!-- Footer -->
-    <Footer />
-    <!-- Footer top -->
-    <!-- Footer bottom -->
-  </div>
+        <!-- Footer -->
+        <Footer />
+        <!-- Footer top -->
+        <!-- Footer bottom -->
+    </div>
 </template>
 
 <script>
@@ -22,12 +22,12 @@ import Main from "./components/Main.vue";
 import Footer from "./components/Footer.vue";
 
 export default {
-  name: "App",
-  components: {
-    Header,
-    Main,
-    Footer,
-  },
+    name: "App",
+    components: {
+        Header,
+        Main,
+        Footer,
+    },
 };
 </script>
 
